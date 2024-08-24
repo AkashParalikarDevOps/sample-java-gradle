@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClassName = 'com.example.App' // Change this to your main class
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.example.App' // Change this to your main class
+        )
+    }
+}
